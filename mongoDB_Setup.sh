@@ -8,5 +8,7 @@ sudo apt install -y mongodb-org
 sudo systemctl start mongod
 sudo systemctl enable mongod
 
-# Making It Available From WSL To Windows Host To view in Mongo DB Compass
+# Changing MongoDb Config
+
+vim /etc/mongod.conf
 
