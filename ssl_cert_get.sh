@@ -8,3 +8,5 @@ sudo certbot certonly --standalone -d your-domain.com
 # If you have NGINX already and want Certbot to configure the SSL for you:
 sudo certbot --nginx -d your-domain.com
 
+
+# Note: The Certificates would be Stored in the /etc/letsencrypt/live/domain_name folder
