@@ -1,0 +1,22 @@
+version: "3.3"
+
+services:
+  n8n:
+    image: n8nio/n8n:nightly
+    container_name: n8n-neocfo
+    restart: always
+    ports:
+      - "5678:5678"
+    environment:
+      - N8N_HOST=neocfo.dedyn.io
+      - N8N_PORT=5678
+      - N8N_PROTOCOL=http                  # Keep this http, since NGINX is handling HTTPS
+      - WEBHOOK_URL=https://neocfo.dedyn.io/
+      - NODE_ENV=production
+      - GENERIC_TIMEZONE=Asia/Kolkata
+      - N8N_BASIC_AUTH_ACTIVE=true         # Optional, but good for securing admin
+      - N8N_BASIC_AUTH_USER=admin
+      - N8N_BASIC_AUTH_PASSWORD=strongpassword123
+    volumes:
+      - /home/n8n-data:/home/node/.n8n
+      - /home/n8n-data/local_files:/files
