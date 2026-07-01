@@ -1,0 +1,1 @@
+In Gcp VM instances we dont have password ssh be default if u want to make one then we can simply use run the script itself in sudo and hence configure the vm to allow password based ssh into the gcp VM's
