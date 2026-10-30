@@ -35,7 +35,7 @@ docker run --rm hello-world
 # Specific case: if the default installation above did not provide Docker
 # Compose v2 (for example, `docker compose version` fails), install the
 # standalone Compose plugin binary manually on x86_64:
-#
+
 sudo mkdir -p /usr/local/lib/docker/cli-plugins
 sudo curl -fL https://github.com/docker/compose/releases/latest/download/docker-compose-linux-x86_64 \
   -o /usr/local/lib/docker/cli-plugins/docker-compose
